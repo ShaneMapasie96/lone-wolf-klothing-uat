@@ -1,0 +1,379 @@
+/* Import the Poppins font with various weights */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Container for the product layout section */
+.sweatpants_and_shorts-container {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+/* Category title */
+.sweatpants_and_shorts-container .product-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 108px;
+    margin-bottom: 10px;
+    padding: 0 16px;
+}
+
+/* Adjustments for pseudo-elements before and after the category title */
+.sweatpants_and_shorts-container .product-title::before,
+.sweatpants_and_shorts-container .product-title::after {
+    content: "";
+    flex: 1 1 140px;
+    max-width: 180px;
+    min-width: 48px;
+    height: 2px;
+    background-color: #718391;
+}
+
+/* Category description */
+.sweatpants_and_shorts-container .product-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 0 16px;
+}
+
+.sweatpants_and_shorts-container .collection-statement {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    padding: 0 16px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* Items container */
+.sweatpants_and_shorts-container .items_container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.sweatpants_and_shorts-container .items_container.tracksuits-product-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 300px) minmax(0, 300px) minmax(0, 300px);
+    align-items: start;
+}
+
+.sweatpants_and_shorts-container .tracksuits-image-placeholder {
+    width: 100%;
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-frame {
+    padding: 10px;
+    border: 1px solid rgba(190, 200, 220, 0.55);
+    border-radius: 16px;
+    background: rgba(20, 28, 42, 0.32);
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-frame figure {
+    margin: 0;
+    padding-top: 0;
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-main {
+    height: 390px;
+    border-radius: 13px;
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-thumbnails figure {
+    height: 78px;
+    border-radius: 8px;
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-right {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-right figure {
+    height: 540px;
+    border-radius: 16px;
+}
+
+.sweatpants_and_shorts-container .tracksuits-gallery-frame img {
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) and (min-width: 561px) {
+    .sweatpants_and_shorts-container .items_container.tracksuits-product-layout {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Each item */
+.sweatpants_and_shorts-container .item {
+    width: min(100%, 300px);
+    flex: 1 1 260px;
+    max-width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: transform 0.4s;
+}
+
+/* Hover effect for item images within figure */
+.sweatpants_and_shorts-container .item:hover figure > img {
+    transform: scale(1.05);
+}
+
+/* Figure element */
+.sweatpants_and_shorts-container figure {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+/* Image within figure */
+.sweatpants_and_shorts-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+/* Details container */
+.sweatpants_and_shorts-container .details_container {
+    padding: 1rem;
+}
+
+/* Section headers */
+.sweatpants_and_shorts-container h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    display: none;
+}
+
+/* Descriptions */
+.sweatpants_and_shorts-container .description {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #969696;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 1em;
+}
+
+/* Buy container */
+.sweatpants_and_shorts-container .buy_container {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 5px #cccccc;
+}
+
+/* Prices */
+.sweatpants_and_shorts-container .price {
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #78788c;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.sweatpants_and_shorts-container .add-to-cart-button {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #78788c;
+    outline: 0;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 2rem;
+    font-size: 1em;
+    box-shadow: 0 0 5px #cccccc;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.sweatpants_and_shorts-container .add-to-cart-button:hover {
+    cursor: pointer;
+    background: #78788c;
+    color: #ffffff;
+}
+
+/* Flexbox utility class */
+.sweatpants_and_shorts-container .flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+    gap: 12px;
+}
+
+/* Labels */
+label {
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+/* Input holder */
+.input-holder {
+    width: 50%;
+}
+
+/* Input elements */
+.sweatpants_and_shorts-container .input-style {
+    width: 70%;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #78788c;
+    background-color: rgba(17, 24, 32, 0.78);
+    color: #ffffff;
+}
+
+.sweatpants_and_shorts-container .input-style option {
+    background-color: #1f2b3a;
+    color: #ffffff;
+}
+
+.sweatpants_and_shorts-container .design-selector-row {
+    margin: 0.75em 0 0;
+}
+
+.sweatpants_and_shorts-container .design-selector-row .input-style {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 6px;
+}
+
+/* Color row container */
+.color-row {
+    display: flex;
+    align-items: center;
+}
+
+/* Color elements */
+.colors {
+    width: 60%;
+    display: flex;
+    margin-left: 10px;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+/* Individual color elements */
+.color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 4px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.color:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75), 0 0 0 4px rgba(255, 255, 255, 0.35);
+}
+
+.color.selected,
+.color.selected-color {
+    border-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.85), 0 0 0 4px rgba(255, 255, 255, 0.9);
+    transform: scale(1.08);
+}
+
+/* Specific color adjustments for each color */
+.color:nth-child(6) { background: #ffdb58; }
+.color:nth-child(5) { background: #da2231; }
+.color:nth-child(4) { background: #fc8eac; }
+.color:nth-child(3) { background: black; }
+.color:nth-child(2) { background: grey; }
+.color:nth-child(1) { background: white; }
+
+.sweatpants_and_shorts-container .color[data-color="Black"] { background: #111111; }
+.sweatpants_and_shorts-container .color[data-color="Grey"] { background: #808080; }
+.sweatpants_and_shorts-container .color[data-color="White"] { background: #ffffff; }
+.sweatpants_and_shorts-container .color[data-color="Pink"] { background: #fc8eac; }
+.sweatpants_and_shorts-container .color[data-color="Red"] { background: #da2231; }
+.sweatpants_and_shorts-container .color[data-color="Yellow"] { background: #ffdb58; }
+
+@media (max-width: 768px) {
+    .sweatpants_and_shorts-container .product-title {
+        font-size: 28px;
+        margin-top: 32px;
+    }
+
+    .sweatpants_and_shorts-container .product-title::before,
+    .sweatpants_and_shorts-container .product-title::after {
+        display: none;
+    }
+
+    .sweatpants_and_shorts-container .item {
+        flex-basis: calc(50% - 20px);
+        max-width: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .sweatpants_and_shorts-container {
+        width: calc(100% - 20px);
+    }
+
+    .sweatpants_and_shorts-container .items_container.tracksuits-product-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .sweatpants_and_shorts-container .item {
+        flex-basis: 100%;
+    }
+
+    .sweatpants_and_shorts-container .flex-space-between,
+    .color-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-holder,
+    .colors,
+    .sweatpants_and_shorts-container .input-style {
+        width: 100%;
+    }
+
+    .sweatpants_and_shorts-container .input-style,
+    .colors {
+        margin-left: 0;
+    }
+}

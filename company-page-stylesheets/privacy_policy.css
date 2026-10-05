@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+  
+  section {
+    margin-top: 108px;
+  }
+  .policy-container {
+    text-align: center; /* Center-align content within the container */
+}
+
+.main-heading {
+  width: min(960px, calc(100% - 32px)); /* Decrease the width of the container */
+  background-color: transparent; /* Ensure a white background for the shipping content */
+  border-radius: 6px;
+  padding: 20px;
+  margin: 45px auto; /* Center the container horizontally */
+  text-align: center; /* Center the content inside the container */
+  color: rgba(255, 255, 255, 1); /* Text color */
+}
+
+.main-heading::before,
+.main-heading::after {
+  content: "";
+  flex: 1 1 140px;
+  max-width: 180px;
+  min-width: 48px;
+  height: 2px;
+  background-color: #718391;
+
+}
+
+
+.main-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 32px;
+  line-height: 31px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+  text-align: center;
+  position: relative; /* Add position relative for positioning pseudo-elements */
+  padding: 0 16px;
+}
+
+.main-heading-paragraph {
+  line-height: 1.75;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+  
+  article {
+    width: min(960px, calc(100% - 32px));
+    border: 1px solid black;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #cccccc;;
+    padding: 15px;
+    margin: 32px auto 48px;
+    font-size: 22px
+  }
+
+  .privacy-policy-headings{
+    color: rgba(255, 255, 255, 1);
+    display: block;
+    margin: 0 auto 10px;
+    font-size: x-large;
+    font-weight: 500;
+    line-height: 1.75;
+  }
+  
+  .privacy-policy-paragraph {
+    line-height: 1.75;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+article a { color: #fff; text-decoration: underline; overflow-wrap: anywhere; }
+article .privacy-policy-headings { margin-top: 24px; }
+
+@media (max-width: 768px) {
+  section {
+    margin-top: 32px;
+  }
+
+  .main-heading {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .main-heading::before,
+  .main-heading::after {
+    display: none;
+  }
+
+  article {
+    font-size: 18px;
+  }
+}

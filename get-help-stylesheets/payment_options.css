@@ -1,0 +1,73 @@
+/* Shipping Page CSS */
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .payment-options-container {
+        width: min(960px, calc(100% - 32px)); /* Decrease the width of the container */
+    background-color: transparent; /* Ensure a white background for the shipping content */
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 0 5px #cccccc;
+    margin: 108px auto 50px; /* Keep title alignment consistent across pages */
+    text-align: center; /* Center the content inside the container */
+}
+
+
+.payment-options-heading::before,
+.payment-options-heading::after {
+    content: "";
+    flex: 1 1 140px;
+    max-width: 180px;
+    min-width: 48px;
+    height: 2px;
+    background-color: #718391;
+}
+
+.payment-options-heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 1);
+    font-size: 32px;
+    line-height: 31px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 0 16px;
+}
+
+.payment-options-content {
+    text-align: center;
+}
+
+.payment-options-paragraph {
+    display: block;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .payment-options-container {
+        margin: 32px auto 40px;
+    }
+
+    .payment-options-heading {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .payment-options-heading::before,
+    .payment-options-heading::after {
+        display: none;
+    }
+}

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-services-container {
+  position: relative; /* Make the container position relative */
+  width: min(960px, calc(100% - 32px)); /* Decrease the width of the container */
+  background-color: transparent; /* Ensure a white background for the shipping content */
+  border-radius: 6px;
+  padding: 20px;
+  margin: 0 auto; /* Keep the heading aligned with other page titles */
+  text-align: center; /* Center the content inside the container */
+  color: rgba(255, 255, 255, 1);
+}
+
+.services-heading {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 32px;
+  line-height: 31px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+  position: relative; /* Add position relative for positioning pseudo-elements */
+  padding: 0 16px;
+}
+
+.services-heading::before,
+.services-heading::after {
+  content: "";
+  flex: 1 1 140px;
+  max-width: 180px;
+  min-width: 48px;
+  height: 2px;
+  background-color: #718391;
+}
+
+.sub-heading {
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.our-services {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  align-content: start;
+  gap: 24px;
+  padding: 108px 0 48px;
+}
+
+.container {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.cus-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.description-column {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+
+.clothes-card {
+  width: calc(100% - 40px); /* Decreasing width by 40px */
+  min-height: calc(100% - 20px); /* Decreasing height by 20px */
+  padding: 1em 1.5em; /* Adjusting padding */
+  margin: 0 auto;
+  background-color: transparent;
+  text-transform: capitalize;
+  border: 2px solid #78788c;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #cccccc;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0; /* Removing bottom margin */
+  padding-top: 10px; /* Adding padding to the top */
+}
+
+p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto 10px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.clothes-card:hover {
+  background-position: 0 100%;
+}
+
+.clothes-card:hover h3 {
+  color: #ffffff;
+}
+
+.clothes-card:hover p {
+  color: #f0f0f0;
+}
+
+@media screen and (min-width: 768px) {
+  .description-column {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .description-column {
+    flex: 0 1 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-services {
+    padding: 32px 0 40px;
+  }
+
+  .services-heading {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .services-heading::before,
+  .services-heading::after {
+    display: none;
+  }
+
+  .clothes-card {
+    width: 100%;
+  }
+}
+
+.document-downloads {
+  width: min(1120px, calc(100% - 40px));
+  margin: 12px auto 32px;
+  color: #fff;
+  scroll-margin-top: 100px;
+}
+.downloads-intro { margin-bottom: 28px; text-align: left; }
+.downloads-eyebrow { color: #f2b1ba; font-size: 12px; font-weight: 600; letter-spacing: 2px; }
+.document-downloads h2 { margin: 8px 0 10px; font-size: clamp(28px, 3.3vw, 42px); line-height: 1.15; letter-spacing: -1px; }
+.document-downloads p { text-align: left; margin: 0; color: #c5cbd3; font-size: 15px; line-height: 1.7; }
+.document-download-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.document-download-card { padding: 30px; background: transparent; border: 2px solid #78788c; border-radius: 6px; box-shadow: 0 0 3px #cccccc; }
+.document-card-top { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 1.5px; color: #b6c0cc; }
+.document-card-top svg { width: 24px; height: 28px; flex: none; }
+.document-year { margin-left: auto; color: #fff; font-size: 16px; letter-spacing: 0; }
+.document-download-card h3 { padding: 0; margin: 24px 0 10px; font-size: 32px; letter-spacing: -0.5px; }
+.document-file-info { display: block; color: #a7b2c0; font-size: 12px; margin: 20px 0 16px; }
+.document-download-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; }
+.document-downloads a { color: #fff; text-underline-offset: 4px; }
+.document-view { display: inline-flex; justify-content: space-between; align-items: center; gap: 24px; padding: 13px 18px; background: #fff; color: #121923 !important; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; }
+.document-view:hover { background: #f5dce1; }
+.document-save { display: inline-flex; align-items: center; gap: 10px; padding: 12px 0; font-size: 14px; }
+.document-downloads a:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
+.downloads-footnote { display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; margin-top: 18px; }
+.downloads-footnote p, .downloads-footnote a { font-size: 12px; }
+@media (max-width: 640px) {
+  .document-downloads { width: calc(100% - 32px); scroll-margin-top: 80px; }
+  .document-download-grid { grid-template-columns: 1fr; gap: 16px; }
+  .document-download-card { padding: 24px; }
+  .downloads-intro { margin-bottom: 22px; }
+}
